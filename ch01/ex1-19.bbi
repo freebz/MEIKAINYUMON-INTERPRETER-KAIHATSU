@@ -1,0 +1,6 @@
+func  add(a, b)
+   return a+b
+end
+
+n = add( 10, 20 )
+println "n= ", n        // 출력: n=30

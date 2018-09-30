@@ -1,0 +1,13 @@
+sum = 0
+for n=1 to 10
+    sum = sum + n          // sum은 5가 된다. 1~10의 합
+end
+
+sum = 0
+for n=1 to 10 step 2       // step을 지정
+    sum = sum + n          // sum은 25가 된다. 1, 3, 5, 7, 9의 합
+end
+
+for n=5 to 1 step -1       // step 값이 음수면 감소하는 방향으로 루프
+    print n, " "           // 최종 출력은 "5 4 3 2 1"이 된다
+end

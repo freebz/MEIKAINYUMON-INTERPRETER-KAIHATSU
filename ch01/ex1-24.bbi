@@ -1,0 +1,6 @@
+n = 1
+sum = 0
+while n <= 10
+   sum = sum + n    // sum의 최종값은 55
+   n = n + 1
+end

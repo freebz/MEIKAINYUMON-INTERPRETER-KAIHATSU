@@ -1,0 +1,13 @@
+println "aa"
+func foo()
+   println "bb"
+end
+println "cc"
+exit
+println "dd"
+func main()
+   println "xx"
+   foo()
+   println "yy"
+end
+println "ee"

@@ -1,0 +1,7 @@
+println "aa"
+func foo()
+   println "bb"
+end
+println "cc"
+exit
+println "dd"

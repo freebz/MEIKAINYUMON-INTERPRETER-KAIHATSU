@@ -1,0 +1,9 @@
+sum = 0
+for n=1 to 10
+    sum = sum + n
+    if n == 3
+       break            // n이 3이면 종료
+    end
+end
+
+break ? n==3            // 조건부 break 문으로 기술한 경우

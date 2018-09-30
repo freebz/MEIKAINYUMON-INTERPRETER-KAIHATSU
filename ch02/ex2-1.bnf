@@ -1,0 +1,8 @@
+constant:
+    integer-constant
+    character-constant
+    floating-constant
+    enumeration-constant
+
+unary-operator: one of
+    & * + - ~ !

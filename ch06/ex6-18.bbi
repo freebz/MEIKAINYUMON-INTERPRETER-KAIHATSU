@@ -1,0 +1,47 @@
+6.7 암묵적 변수 선언 금지
+
+print a    -- (1) 바르다. a 값을 출력
+prnit a    -- (2) 오류. prnit를 변수명으로 인식해 'a 앞에 =가 필요합니다'를 표시
+
+maxdata = 10    -- (3) 첫 번째 이용
+maxData = 20    -- (4) 오타. 새로운 변수 maxData를 등록한다
+if n < maxdata  -- (5) maxdata는 10 그대로다
+
+
+Option Explicit on  -- 변수 선언을 강제한다(기본값)
+
+
+option "var"    -- var로 변수 선언을 강제한다
+
+
+bool explicit_F = false;
+
+void convert()
+{
+   switch (token.kind) {
+   case Option:                           /* 옵션 설정 */
+        if ( 다음 토큰이 "var"라면 ) explicit_F = true;
+	break;
+   ...
+   }
+}
+
+void convert_reset()                      /* 식의 처리 */
+{
+   ...
+   for(;;) {
+      switch(토큰 종류) {
+      case Ident:
+        set_name();		     // 이름 설정
+	...
+	if ((tblNbr=searchName(tmpTb.name, 'v')) == -1) {
+	    if (explicit_F)	     // 변수 등록 없음
+	       err_exit("변수 선언이 필요합니다: ", tmpTb.name);
+	    tblNbr = enter(tmpTb, varId);    // 암묵적 변수 등록
+	}
+	...
+      ...
+      }
+   }
+   ...
+}

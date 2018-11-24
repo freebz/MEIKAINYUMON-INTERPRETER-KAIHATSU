@@ -1,0 +1,35 @@
+7.1 구문 검사의 타이밍
+
+func foo()
+   ...
+end
+
+while a<b
+   ...
+end
+
+
+a = b +         // + 다음이 없다
+a = b + c  d    // c와 d 사이가 빠져있다
+for a=1  10     // to가 없다
+
+
+a = 10
+println a
+exit          -- 여기서 종료
+a + b - c     -- 오류
+
+
+if a < 0      -- 배부분 a < 0이 거짓이라면 ...
+   a * b = c  -- 이 오류를 찾아낼 기회를 만나지 못한다
+end
+
+
+for i=1 to 10000
+   여러 가지 기술
+end
+
+
+convert_to_internalCode(argv[1]);    // 내부 코드로 변환
+syntaxChk();                         // 구문 검사
+execute();                           // 실행

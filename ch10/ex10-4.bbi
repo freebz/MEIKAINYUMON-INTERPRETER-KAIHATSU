@@ -1,0 +1,30 @@
+10.5 for 문
+
+for n = 1 to 5			// step을 생략하면 증분값은 1
+    print n, " "                // 출력 결과는 "1 2 3 4 5 "
+end
+
+for n = 1 to 5  step 1          // step 값이 양수일 때는 증가하는 방향으로 루프
+    print n, " "                // 출력 결과는 "1 2 3 4 5 "
+end
+
+for n = 5 to 1  step -1         // step 값이 음수일 때는 감소하는 방향으로 루프
+    print n, " "                // 출력 결과는 "5 4 3 2 1 "
+end
+
+for n = 1 to 5  step -1         // 감소 방향 루프이지만 한 번도 실행되지 않는다
+    print n, " "
+end
+
+
+
+for n=1 to 5  step 2            // 초깃값 1 최종값 5 증분값 2
+   sum = sum + n
+end
+
+
+n = 1                           // 초깃값 1
+while n <= 5                    // 최종값 5
+   sum = sum + n
+   n = n + 2                    // 증분값 2
+end

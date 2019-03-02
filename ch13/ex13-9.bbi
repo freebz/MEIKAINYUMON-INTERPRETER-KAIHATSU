@@ -1,0 +1,25 @@
+13.10 입출력 표준 함수
+
+readopen(1, "myfile.txt")      // 파일을 입력용(읽기 모드)으로 연다
+s = lineinput(1)               // 문자열을 읽어들인다
+readclose(1)                   // 파일을 닫는다
+
+
+ifstream fin[5];               // 다섯 개의 파일 핸들을 이용할 수 있다
+
+
+bool do_lineinput(int handle, string& s)
+{
+  handle_chk(handle);			       // 올바른 핸들인지 확인
+  if (getline(fin[handle], s)) return true;    // 읽기 성공
+  return false;				       // 읽기 실패
+}
+
+
+while lineinput(1, s)
+  println s                                    // 파일 끝까지 행 단위 입력
+end
+
+
+rfile = readopen("myfile.txt")
+getline(rfile, s)

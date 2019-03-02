@@ -1,0 +1,19 @@
+13.3 문자열 형 처리
+
+a = "abcde"  -- 설정할 문자열 길이에 제한은 없다
+
+
+a = 12.34    -- a는 double 형
+b = a        -- b는 double 형
+c = "abcde"  -- c는 string 형
+d = c        -- d는 string 형
+
+
+string Smem[SMEM_SIZE];
+
+s = "aaa"  -- s의 주소를 0으로 한다
+t = "bbb"  -- t의 주소를 1로 한다
+s = t      -- Smem[0] = Smem[1]의 복사를 한다
+
+
+Smem[0] = Smem[1];
